@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean id = "actor" class="com.ddlab.rnd.autowire.Actor">
+    	<property name="name" value="John Abraham"/>
+    </bean>
+    
+    <!-- Auto-Wiring ‘no’ -->
+    <bean id="movie1" class="com.ddlab.rnd.autowire.Movie">
+    	<property name="actor" ref="actor"/>
+    	<property name="name" value="Garam Masala"/>
+    </bean>
+    
+    <!-- Auto-Wiring ‘byName’ -->
+    <bean id="movie2" class="com.ddlab.rnd.autowire.Movie" autowire="byName">
+    	<property name="name" value="Garam Masala"/>
+    </bean>
+    
+    <!-- Auto-Wiring ‘byType’ -->
+    <bean id="movie3" class="com.ddlab.rnd.autowire.Movie" autowire="byType">
+    	<property name="name" value="Garam Masala"/>
+    </bean>
+    
+    <!-- Auto-Wiring ‘constructor’ -->
+    <bean id="movie4" class="com.ddlab.rnd.autowire.Movie" autowire="constructor">
+    	<property name="name" value="Garam Masala"/>
+    </bean>
+    
+   <!-- Auto-Wiring ‘autodetect’ -->
+   <!--  <bean id="movie5" class="com.ddlab.rnd.autowire.Movie" autowire="default">
+    	<property name="name" value="Garam Masala"/>
+    </bean> -->
+ 
+</beans>

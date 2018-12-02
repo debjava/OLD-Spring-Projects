@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<App>
+    <Name>Application for spring training</Name>
+    <Users>
+        <User>
+            <FirstName>k</FirstName>
+            <LastName>k</LastName>
+            <Password>k</Password>
+            <EmpId>k</EmpId>
+        </User>
+        <User>
+            <FirstName>piku</FirstName>
+            <LastName>piku</LastName>
+            <Password>piku</Password>
+            <EmpId>piku</EmpId>
+        </User>
+        <User>
+            <FirstName>zz</FirstName>
+            <LastName>zz</LastName>
+            <Password>zz</Password>
+            <EmpId>zz</EmpId>
+        </User>
+        <User>
+            <FirstName>qw</FirstName>
+            <LastName>qw</LastName>
+            <Password>qw</Password>
+            <EmpId>qw</EmpId>
+        </User>
+    </Users>
+</App>

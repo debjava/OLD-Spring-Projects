@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home Payment System</title>
+</head>
+<body>
+	<h1>Home Payment System</h1>
+	<form action="/springmvcweb6/authenticlogin.html" method="POST">
+		
+		<!-- Left Div -->
+		<div
+			style="position: absolute; left: 10px; width: 370; height: 270; border: 1px solid green">
+			<table border="0">
+				<tr>
+					<td>
+						<fieldset>
+							<legend>&nbsp; Login &nbsp;</legend>
+							<table>
+								<tr>
+									<td>Username</td>
+									<td><input type="text" id="usernameId" name="username" value="" /></td>
+									<td/>
+								</tr>
+								<tr>&nbsp;</tr>
+								<tr>
+									<td>Password</td>
+									<td><input type="password" id="passwordId" name="password" value="" /></td>
+									<td/>
+								</tr>
+								<tr>
+									<td/>
+									<td>
+										<input type="submit" name="Login" value="Login" />
+										<input type="checkbox" name="admin" value="admin" >Administrator
+									</td>
+									<td/>
+								</tr>
+							</table>
+						</fieldset>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<!-- Right Div for Error display -->
+		<div style="position: absolute; left: 400px; width: 370; height: 270; border: 1px solid red;">
+			
+		</div>
+
+	</form>
+</body>
+</html>

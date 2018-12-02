@@ -1,0 +1,221 @@
+GET Request as XML
+------------------
+http://localhost:8080/restspring/emp/ID/Id1
+In the header, provide
+
+Accept : Application/xml
+
+Output
+------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Status>
+    <errCode>002</errCode>
+    <errMsg>Employee with this id Id1 does not exist</errMsg>
+    <status>Failed</status>
+</Status>
+
+GET Request as JSON
+------------------
+http://localhost:8080/restspring/emp/ID/Id1
+In the header, provide
+
+Accept : Application/json
+
+Output
+------
+{
+    "status": "Failed",
+    "errCode": "002",
+    "errMsg": "Employee with this id Id1 does not exist"
+}
+
+POST Request as XML
+-------------------
+http://localhost:8080/restspring/emp/create
+
+Content-type : application/xml
+Accept : application/xml
+
+XML Request
+-----------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employee>
+    <act>
+        <actNo>11111</actNo>
+        <name>DD Mishra</name>
+    </act>
+    <adrs>
+        <countryName>India</countryName>
+        <streetName>Bangalore</streetName>
+    </adrs>
+    <id>Id1</id>
+    <name>Name-1</name>
+</employee>
+
+Output
+------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Status>
+    <errCode></errCode>
+    <errMsg></errMsg>
+    <status>Success</status>
+</Status>
+
+POST Request as JSON
+--------------------
+http://localhost:8080/restspring/emp/create
+
+Content-type : application/json
+Accept : application/json
+
+JSON Request
+-----------
+{
+  "Id" : "Id5",
+  "Name" : "Name-1",
+  "Adrs" : {
+    "StreetName" : "Bangalore",
+    "CountryName" : "India"
+  },
+  "Account" : {
+    "AccountName" : "DD Mishra",
+    "AccountNo" : "11111"
+  }
+}
+
+Output
+------
+{
+    "status": "Success",
+    "errCode": "",
+    "errMsg": ""
+}
+
+PUT Request as XML
+------------------
+http://localhost:8080/springrest1/emp/update
+
+XML Request
+-----------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employee>
+    <act>
+        <actNo>11111</actNo>
+        <name>Deba Mishra</name>
+    </act>
+    <adrs>
+        <countryName>India</countryName>
+        <streetName>Bhubaneswar</streetName>
+    </adrs>
+    <id>Id1</id>
+    <name>Name-1</name>
+</employee>
+
+Output
+------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Status>
+    <errCode></errCode>
+    <errMsg></errMsg>
+    <status>Success</status>
+</Status>
+
+PUT Request as JSON
+--------------------
+http://localhost:8080/springrest1/emp/update
+
+
+JSOn Request
+------------
+{
+  "Id" : "Id1",
+  "Name" : "Debadatta Mishra",
+  "Adrs" : {
+    "StreetName" : "Odisha",
+    "CountryName" : "India"
+  },
+  "Account" : {
+    "AccountName" : "Debadatta Mishra",
+    "AccountNo" : "11111"
+  }
+}
+
+Output
+------
+{
+    "status": "Success",
+    "errCode": "",
+    "errMsg": ""
+}
+
+Delete Request as XML
+---------------------
+http://localhost:8080/springrest1/emp/delete
+
+Content-Type : application/xml
+Accept : application/xml
+
+XML Request
+-----------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employee>
+    <act>
+        <actNo>11111</actNo>
+        <name>Deba Mishra</name>
+    </act>
+    <adrs>
+        <countryName>India</countryName>
+        <streetName>Bangalore</streetName>
+    </adrs>
+    <id>Id1</id>
+    <name>Name-1</name>
+</employee>
+
+Output
+------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Status>
+    <errCode></errCode>
+    <errMsg></errMsg>
+    <status>Success</status>
+</Status>
+
+
+
+Delete Request as JSON
+---------------------
+http://localhost:8080/springrest1/emp/delete
+
+Content-Type : application/json
+Accept : application/json
+
+JSON Request
+------------
+{
+  "Id" : "Id2",
+  "Name" : "Debadatta Mishra",
+  "Adrs" : {
+    "StreetName" : "Odisha",
+    "CountryName" : "India"
+  },
+  "Account" : {
+    "AccountName" : "Debadatta Mishra",
+    "AccountNo" : "11111"
+  }
+}
+
+Output
+------
+{
+    "status": "Success",
+    "errCode": "",
+    "errMsg": ""
+}
+
+
+Difference between ACCEPT and Content-Type
+-------------------------------------------
+ACCEPT is what the browser is able to digest
+Content-Type is what format the actual data is in,
+Content-Type is the format of the data to be sent to the server.
+Accept is the format of the data sent by the server.
